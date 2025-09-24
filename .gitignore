@@ -1,0 +1,16 @@
+# Build and output files
+/Debug/
+/Release/
+/output/
+/bin/
+/obj/
+
+# Eclipse / Simplicity Studio project files
+.settings/
+/.metadata/
+/.cproject
+.project
+
+# OS files
+.DS_Store
+Thumbs.db

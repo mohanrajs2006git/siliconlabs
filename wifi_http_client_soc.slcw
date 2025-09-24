@@ -1,0 +1,8 @@
+---
+workspace_name: "wifi_http_client_soc"
+label: "wifi_http_client_soc"
+quality: "unknown"
+project:
+- id: "main"
+  path: "wifi_http_client_soc.slcp"
+  output: "."
