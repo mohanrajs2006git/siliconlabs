@@ -1,47 +1,78 @@
-# Real-Time Interactive Sensor Dashboard
+# 🧠 Edge AI-Based Smart Patient Monitoring and Assistance System  
 
-**A Smart Wearable Sensor Dashboard for Live Monitoring & Alerts**
-
-Monitor acceleration, gyroscope, temperature, humidity, and button inputs in real time with an interactive web dashboard. Designed for wearable IoT devices using the Silicon Labs SiWx917 Dev Kit, the dashboard provides instant insights, trend analysis, and threshold-based alerts.
-
----
-
-## Key Features
-
-- **Real-Time Sensor Display:** Live values for motion, temperature, humidity, and buttons.  
-- **Threshold-Based Alerts:** Color-coded cards and animated alerts for critical readings.  
-- **Side-by-Side Value & Status:** Sensor value on left, status/alert on right for clarity.  
-- **Trend Visualization:** Mini charts display recent readings for motion and environment.  
-- **Dynamic Dashboard Image:** Changes based on sensor alerts for interactive feedback.  
-- **Summary Panel:** Quick overview of total alerts, max temperature, and max motion.  
-- **Sound Alerts:** Browser notifications for critical sensor events.  
+## 📖 Overview  
+**NeuroCare+** is an intelligent, edge AI-powered patient monitoring and assistance system designed to support bedridden, elderly, and neurologically impaired individuals in healthcare environments.  
+Built on the **Silicon Labs SiWx917 SoC**, the system integrates multiple onboard and external sensors to enable **real-time health monitoring, emergency detection, and caregiver communication** — all while ensuring **low-power operation** and **data privacy through on-device inference**.  
 
 ---
 
-## Workflow
-
-### Sensor Data Acquisition
-- Data collected from wearable sensors: accelerometer, gyroscope, temperature, humidity, and buttons.
-
-### Data Processing & Threshold Detection
-- Each reading is analyzed against predefined thresholds to determine the status (Normal, Alert, High Motion, Hot, etc.).
-
-### Real-Time Dashboard Update
-- Values and status are sent to the browser via HTTP.  
-- Dashboard cards are dynamically updated with animations, charts, and alert effects.
-
-### Visual & Audio Feedback
-- Critical readings trigger card animations, color changes, and optional sound notifications for immediate attention.
-
-### Trend Analysis & Summary
-- Mini-charts display short-term trends for motion and environment data.  
-- Summary panel provides quick insights on overall system status.
+## 🎯 Objectives  
+- Enable real-time monitoring of patient health and movement.  
+- Detect emergencies such as falls, fever, or panic episodes using onboard sensors.  
+- Provide **Wi-Fi-based alerts** and **mobile notifications** to caregivers and family members.  
+- Ensure **offline functionality** and **privacy-preserving edge AI inference**.  
+- Enhance patient autonomy and reduce caregiver workload.  
 
 ---
 
-## Applications
+## ⚙️ System Architecture  
 
-- **Wearable Health Monitoring:** Track motion, activity, and environmental conditions for health or fitness applications.  
-- **Industrial IoT:** Real-time monitoring of machine vibrations, temperature, and environment for predictive maintenance.  
-- **Smart Environments:** Monitor humidity and temperature for homes, offices, or greenhouses.  
-- **Education & Demonstrations:** Interactive tool for IoT and embedded system learning, hackathons, and live demos.
+### 🧩 Hardware Components  
+- **Silicon Labs SiWx917 SoC** – Edge AI processor with integrated Wi-Fi, BLE, and sensor interfaces.  
+- **Onboard Sensors:**  
+  - 6-axis **Inertial Measurement Unit (IMU)** – motion & fall detection  
+  - **Temperature and Humidity Sensor** – environment and body temperature tracking  
+  - **MEMS Stereo Microphones** – voice command input (for future TinyML integration)  
+  - **RGB LED and Push Buttons** – patient interaction and emergency triggers  
+
+---
+
+### 💡 System Workflow  
+1. **Sensor Data Acquisition** – The SiWx917 reads data from the onboard IMU, temperature, humidity, and button inputs.  
+2. **Edge AI Inference (Planned)** – Local TinyML models analyze sensor data to detect falls, anomalies, or distress events.  
+3. **Wireless Communication** – Detected alerts are transmitted to the caretaker via Wi-Fi or BLE.  
+4. **Mobile App Integration** – Caretakers receive instant notifications, confirm actions taken, and view patient history logs.  
+5. **Data Privacy** – All sensitive processing happens locally on the device to preserve confidentiality.  
+
+---
+
+## 🚀 Features  
+✅ Real-time monitoring using SiWx917 onboard sensors  
+✅ Wi-Fi-based data transfer to caretaker web or mobile dashboard  
+✅ Touch/button-based emergency assistance from the patient  
+✅ Mobile app notifications and caregiver response tracking  
+✅ Planned TinyML-based fall and voice recognition models  
+✅ Scalable and energy-efficient architecture for continuous operation  
+✅ Local processing ensuring privacy-first healthcare monitoring  
+
+---
+
+## 🧰 Software Implementation  
+- **Platform:** Silicon Labs SiWx917 SDK  
+- **Programming Language:** C / Embedded C  
+- **Sensor APIs Used:**  
+  - IMU (Accelerometer & Gyroscope)  
+  - Relative Humidity & Temperature Sensor APIs  
+  - Push Button & LED control libraries  
+- **Communication:** Wi-Fi (HTTP / MQTT for web server updates)  
+- **Data Visualization:** Web dashboard (live monitoring interface)  
+
+---
+
+## 📶 Communication Flow  
+1. Patient unit acquires sensor data.  
+2. SiWx917 processes and transmits data via Wi-Fi.  
+3. Web server updates patient dashboard in real time.  
+4. Caretaker mobile app receives notification and confirms response.  
+5. History log maintained for family monitoring and reports.  
+
+---
+
+## 🧪 Current Progress  
+- Successfully accessed **6-axis IMU, temperature, and humidity sensors** from SiWx917.  
+- Implemented **data acquisition and Wi-Fi transmission** to a web server.  
+- Integrated **push buttons** for patient input and alert generation.  
+- Designed **mobile app interface** for notifications and history logging.  
+
+---
+
